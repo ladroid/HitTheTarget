@@ -1,19 +1,17 @@
 extends Node2D
 
+#export (int) var speed = 30000
+export (int) var attack_range = 5
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+#const scn_player = preload("res://scenes/SpaceShip.tscn")
+#onready var player = get_tree().get_root().get_node("SpaceShip")
+var velocity = Vector2()
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _physics_process(delta):
+	#var player = scn_player.instance()
+	var dir = ($SpaceShip.global_position - $Enemy.global_position).normalized()
+	#move_and_collide(dir * speed * delta)
+	$Enemy.move_and_slide(dir * $Enemy.speed * delta)
 
 
 func _on_SpaceShip_shoot(bullet, pos, dir):

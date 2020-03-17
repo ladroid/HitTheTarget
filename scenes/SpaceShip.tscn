@@ -33,4 +33,7 @@ __meta__ = {
 position = Vector2( -3.8147e-06, 0.20949 )
 
 [node name="GunTimer" type="Timer" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
 [connection signal="timeout" from="GunTimer" to="." method="_on_GunTimer_timeout"]

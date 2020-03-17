@@ -18,7 +18,7 @@ func _ready():
 func _process(delta):
 	_look_at_mouse()
 	_move_to_mouse()
-	if Input.is_action_just_pressed("ui_focus_next"):
+	if Input.is_mouse_button_pressed(BUTTON_LEFT):
 		shoot()
 	
 func _look_at_mouse():

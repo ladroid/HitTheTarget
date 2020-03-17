@@ -12,7 +12,6 @@ script = ExtResource( 3 )
 position = Vector2( 512.401, 299.697 )
 scale = Vector2( 3.99776, 2.20007 )
 texture = ExtResource( 1 )
-region_enabled = true
 
 [node name="SpaceShip" parent="." instance=ExtResource( 2 )]
 position = Vector2( 478.341, 488.831 )

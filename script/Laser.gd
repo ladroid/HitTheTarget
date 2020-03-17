@@ -24,4 +24,3 @@ func _on_Lifetime_timeout():
 func _on_Laser_body_entered(body):
 	if body.name == "Enemy":
 		queue_free()
-	pass # Replace with function body.

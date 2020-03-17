@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var speed = 10000
 var attack_range = 5
+
 func _read():
 	pass
 	
@@ -27,5 +28,3 @@ func _read():
 
 #func _physics_process(delta):
 	#move_and_slide(velocity * delta)
-
-

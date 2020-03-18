@@ -20,6 +20,10 @@ func _process(delta):
 	_move_to_mouse()
 	if Input.is_mouse_button_pressed(BUTTON_LEFT):
 		shoot()
+	if get_slide_count() > 0:
+		for i in range(get_slide_count()):
+			if "Enemy" in get_slide_collision(i).collider.name:
+				dead()
 	
 func _look_at_mouse():
 	look_at(get_global_mouse_position())
@@ -48,3 +52,7 @@ func sawn_laser(pos, dir):
 
 func _on_GunTimer_timeout():
 	can_shoot = true
+	
+func dead():
+	queue_free()
+	get_tree().change_scene("res://scenes/SpaceWorld.tscn")	

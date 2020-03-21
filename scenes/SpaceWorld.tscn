@@ -14,7 +14,7 @@ scale = Vector2( 3.99776, 2.20007 )
 texture = ExtResource( 1 )
 
 [node name="SpaceShip" parent="." instance=ExtResource( 2 )]
-position = Vector2( 478.341, 488.831 )
+position = Vector2( 480.506, 447.688 )
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
 position = Vector2( 408.442, 208.469 )

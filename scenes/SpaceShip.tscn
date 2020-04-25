@@ -36,4 +36,5 @@ position = Vector2( -3.8147e-06, 0.20949 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+smoothing_enabled = true
 [connection signal="timeout" from="GunTimer" to="." method="_on_GunTimer_timeout"]

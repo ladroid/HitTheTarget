@@ -13,7 +13,6 @@ func spawn_enemy():
 	enemy.position.y = y
 	enemy.position.x = x
 	add_child(enemy)
-	print("SPAWN SPAWN")
 
 func _ready():
 	set_physics_process(true)

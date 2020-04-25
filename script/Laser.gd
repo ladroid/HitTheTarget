@@ -14,7 +14,6 @@ func _start(pos, dir):
 
 func _process(delta):
 	position += velocity * delta
-	
 
 
 func _on_Lifetime_timeout():
@@ -22,5 +21,5 @@ func _on_Lifetime_timeout():
 
 
 func _on_Laser_body_entered(body):
-	if body.name == "Enemy":
+	if "Enemy" in body.name:
 		body.dead()

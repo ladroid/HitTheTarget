@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+export (int) var speed = 10000
 var hp = 0
 var is_dead = false
 var velocity = Vector2()
@@ -17,6 +18,8 @@ func dead():
 		queue_free()
 
 func _physics_process(delta):
+	var dir = (get_parent().get_node("SpaceShip").global_position - global_position).normalized()
+	move_and_slide(dir * speed * delta)
 	if get_slide_count() > 0:
 		for i in range(get_slide_count()):
 			if "SpaceShip" in get_slide_collision(i).collider.name:

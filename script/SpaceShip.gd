@@ -40,8 +40,8 @@ func shoot():
 	if can_shoot:
 		can_shoot = false
 		$GunTimer.start()
-		#var dir = (get_global_mouse_position() - position).rotated($trunnel.global_rotation)
-		var dir = Vector2(1, 0).rotated($trunnel.global_rotation)
+		#var dir = (get_global_mouse_position() - $trunnel/Position2D.global_position).rotated($trunnel/Position2D.global_rotation)
+		var dir = Vector2(1, 0).rotated($trunnel/Position2D.global_rotation)
 		emit_signal("shoot", Laser, $trunnel/Position2D.global_position, dir)
 		#sawn_laser($trunnel/Position2D.global_position, dir)
 		
